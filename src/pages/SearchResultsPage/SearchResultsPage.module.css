@@ -2,9 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  background-color: #333;
-  border-radius: 8px;
+  padding: clamp(15px, 3vw, 20px);
+  background: linear-gradient(
+    135deg,
+    rgba(51, 51, 51, 0.9),
+    rgba(26, 26, 46, 0.8)
+  );
+  backdrop-filter: blur(10px);
+  border-radius: clamp(8px, 1.5vw, 12px);
+  margin: clamp(10px, 2vw, 15px);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  min-height: 80vh;
 }
 
 .header {
@@ -12,50 +20,60 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: clamp(15px, 3vw, 20px);
 }
 
 .title {
   color: #00ffff;
-  font-size: 1.8rem;
-  margin: 10px 0;
+  font-family: "Orbitron", "Exo 2", sans-serif;
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  font-weight: 700;
+  margin: clamp(8px, 2vw, 10px) 0;
   text-align: center;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+  word-wrap: break-word;
 }
 
 .backLink {
   color: #00ffff;
   text-decoration: none;
-  font-size: 1.1rem;
-  padding: 8px 16px;
+  font-family: "Exo 2", sans-serif;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  padding: clamp(6px, 1.5vw, 8px) clamp(12px, 2.5vw, 16px);
   border: 2px solid #00ffff;
-  border-radius: 5px;
+  border-radius: clamp(4px, 1vw, 6px);
   transition: all 0.3s ease;
-  margin-bottom: 10px;
+  margin-bottom: clamp(8px, 2vw, 10px);
+  display: inline-block;
 }
 
 .backLink:hover {
   background-color: #00ffff;
-  color: #333;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
 }
 
 .noQuery {
   text-align: center;
   color: #fff;
-  padding: 40px 20px;
+  padding: clamp(30px, 5vw, 40px) clamp(15px, 3vw, 20px);
 }
 
 .noQuery h2 {
   color: #00ffff;
-  margin-bottom: 10px;
+  font-family: "Orbitron", "Exo 2", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: clamp(8px, 2vw, 10px);
 }
 
 .noQuery p {
-  margin-bottom: 20px;
-  font-size: 1.1rem;
+  margin-bottom: clamp(15px, 3vw, 20px);
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 
 .inputContainer {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: clamp(15px, 3vw, 20px);
 }

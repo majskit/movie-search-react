@@ -1,29 +1,61 @@
 .container {
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 8px;
+  padding: clamp(15px, 3vw, 20px);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(26, 26, 46, 0.7)
+  );
+  backdrop-filter: blur(5px);
+  border-radius: clamp(6px, 1.5vw, 8px);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  margin-top: clamp(15px, 3vw, 20px);
 }
 
 .castList {
   margin: 0 auto;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
-  gap: 10px;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(clamp(80px, 15vw, 120px), 1fr)
+  );
+  gap: clamp(8px, 2vw, 12px);
+  list-style: none;
+  justify-content: center;
 }
 
 .castItem {
   text-align: center;
   color: #00ffff;
-  max-width: 150px;
+  max-width: clamp(120px, 20vw, 150px);
+  background: rgba(0, 255, 255, 0.05);
+  padding: clamp(8px, 2vw, 12px);
+  border-radius: clamp(6px, 1.5vw, 8px);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.castItem:hover {
+  background: rgba(0, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .castImage {
   width: 100%;
-  border-radius: 8px;
+  height: clamp(100px, 20vw, 140px);
+  object-fit: cover;
+  border-radius: clamp(6px, 1.5vw, 8px);
+  margin-bottom: clamp(6px, 1.5vw, 8px);
+}
+
+.castDetails {
+  font-size: clamp(0.7rem, 1.8vw, 0.85rem);
+  line-height: 1.3;
+  margin: 0;
+  word-wrap: break-word;
 }
 
 .castName {
-  margin-top: 10px;
-  font-size: 0.9rem;
+  font-weight: 600;
+  color: #00ffff;
 }

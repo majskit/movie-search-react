@@ -13,7 +13,8 @@ body {
   font-family: "Exo 2", "Orbitron", "Segoe UI", Tahoma, Geneva, Verdana,
     sans-serif;
   font-weight: 400;
-  line-height: 1.6;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  line-height: clamp(1.4, 1.6, 1.6);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -73,48 +74,18 @@ h5,
 h6 {
   font-family: "Orbitron", "Exo 2", sans-serif;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: clamp(0.3px, 0.5px, 0.5px);
 }
 
 .tech-font {
   font-family: "Orbitron", "Exo 2", sans-serif;
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: clamp(0.5px, 1px, 1px);
 }
 
 .accent-text {
   font-family: "Orbitron", "Exo 2", sans-serif;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: clamp(1px, 1.5px, 1.5px);
   text-transform: uppercase;
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    letter-spacing: 0.3px;
-  }
-
-  .tech-font {
-    letter-spacing: 0.5px;
-  }
-
-  .accent-text {
-    letter-spacing: 1px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 13px;
-  }
 }

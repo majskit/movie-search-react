@@ -3,26 +3,39 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: clamp(30px, 5vw, 40px) clamp(15px, 3vw, 20px);
   text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(17, 17, 17, 0.8),
+    rgba(26, 26, 46, 0.6)
+  );
+  backdrop-filter: blur(5px);
+  border-radius: clamp(10px, 2vw, 16px);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  margin: clamp(15px, 3vw, 20px) 0;
 }
 
 .image {
-  max-width: 300px;
+  max-width: clamp(200px, 40vw, 300px);
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  border-radius: clamp(6px, 1.5vw, 8px);
+  margin-bottom: clamp(15px, 3vw, 20px);
 }
 
 .message {
   color: #00ffff;
-  font-size: 1.5rem;
-  margin-top: 10px;
+  font-family: "Orbitron", "Exo 2", sans-serif;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 600;
+  margin-top: clamp(8px, 2vw, 10px);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
 }
 
 .subMessage {
   color: #999;
-  font-size: 1rem;
-  margin-top: 10px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  margin-top: clamp(8px, 2vw, 10px);
+  line-height: 1.5;
 }

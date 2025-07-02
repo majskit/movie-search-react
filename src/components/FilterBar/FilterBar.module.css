@@ -1,15 +1,15 @@
 .container {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin: clamp(10px, 3vw, 20px) 0;
   background: linear-gradient(
     135deg,
     rgba(34, 34, 34, 0.9),
     rgba(26, 26, 46, 0.8)
   );
   backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 16px;
+  padding: clamp(12px, 3vw, 20px);
+  border-radius: clamp(10px, 2vw, 16px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   width: 100%;
   border: 1px solid rgba(0, 255, 255, 0.2);
@@ -30,7 +30,7 @@
     rgba(0, 255, 255, 0.05) 50%,
     transparent 100%
   );
-  border-radius: 16px;
+  border-radius: clamp(10px, 2vw, 16px);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -41,18 +41,19 @@
 
 .form {
   display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 800px;
-  gap: 10px;
+  gap: clamp(8px, 2vw, 10px);
 }
 
 .input {
-  padding: 12px;
+  padding: clamp(10px, 2.5vw, 12px);
   font-family: "Exo 2", "Orbitron", sans-serif;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   font-weight: 400;
   border: 2px solid rgba(0, 255, 255, 0.3);
-  border-radius: 10px;
+  border-radius: clamp(8px, 1.5vw, 10px);
   background: linear-gradient(
     135deg,
     rgba(51, 51, 51, 0.8),
@@ -66,6 +67,7 @@
   transition: all 0.3s ease;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
   min-width: 0;
+  text-align: center;
 }
 
 .input::placeholder {
@@ -89,23 +91,23 @@
 }
 
 .button {
-  padding: 12px 20px;
+  padding: clamp(10px, 2.5vw, 12px) clamp(15px, 3vw, 20px);
   font-family: "Orbitron", "Exo 2", sans-serif;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
   font-weight: 600;
   background: linear-gradient(45deg, #00ffff, #0099cc);
   border: none;
-  border-radius: 10px;
+  border-radius: clamp(8px, 1.5vw, 10px);
   color: #000;
   cursor: pointer;
   transition: all 0.3s ease;
-  min-width: 100px;
-  letter-spacing: 1px;
+  width: 100%;
+  letter-spacing: clamp(0.5px, 1px, 1px);
   text-transform: uppercase;
   box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
-  flex-shrink: 0;
+  min-height: 44px;
 }
 
 .button::before {
@@ -138,8 +140,6 @@
   transform: translateY(0);
   box-shadow: 0 2px 10px rgba(0, 255, 255, 0.3);
 }
-
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .container {
     padding: 15px;

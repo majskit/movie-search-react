@@ -7,7 +7,7 @@
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(0, 255, 255, 0.2);
   margin-top: auto;
-  padding: 25px 0;
+  padding: clamp(15px, 4vw, 25px) 0;
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -31,19 +31,21 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 clamp(12px, 3vw, 20px);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
+  text-align: center;
+  gap: clamp(10px, 2.5vw, 15px);
   box-sizing: border-box;
 }
 
 .logoSection {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: clamp(8px, 1.5vw, 10px);
   flex-shrink: 0;
 }
 
@@ -53,7 +55,7 @@
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 5px;
-  border-radius: 8px;
+  border-radius: clamp(6px, 1vw, 8px);
 }
 
 .logoLink:hover {
@@ -63,7 +65,7 @@
 }
 
 .logo {
-  height: 30px;
+  height: clamp(22px, 4vw, 30px);
   width: auto;
   transition: all 0.3s ease;
   filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.4));
@@ -77,99 +79,29 @@
 .logoText {
   color: #00ffff;
   font-family: "Orbitron", "Exo 2", sans-serif;
-  font-size: 1.1rem;
+  font-size: clamp(0.8rem, 2.5vw, 1.1rem);
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: clamp(0.5px, 1px, 1px);
 }
 
 .infoSection {
-  text-align: right;
+  text-align: center;
   flex-shrink: 0;
 }
 
 .copyright {
   color: #999;
-  font-size: 0.85rem;
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
   margin: 0 0 5px 0;
 }
 
 .powered {
   color: #999;
-  font-size: 0.85rem;
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
   margin: 0;
 }
 
 .tmdb {
   color: #00ffff;
   font-weight: 600;
-}
-
-@media (max-width: 768px) {
-  .footer {
-    padding: 20px 0;
-  }
-
-  .container {
-    flex-direction: column;
-    text-align: center;
-    padding: 0 15px;
-    gap: 12px;
-  }
-
-  .logoSection {
-    gap: 8px;
-  }
-
-  .logo {
-    height: 25px;
-  }
-
-  .logoText {
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-  }
-
-  .infoSection {
-    text-align: center;
-  }
-
-  .copyright,
-  .powered {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer {
-    padding: 15px 0;
-  }
-
-  .container {
-    padding: 0 12px;
-    gap: 10px;
-  }
-
-  .logo {
-    height: 22px;
-  }
-
-  .logoText {
-    font-size: 0.9rem;
-  }
-
-  .copyright,
-  .powered {
-    font-size: 0.75rem;
-  }
-}
-
-@media (max-width: 360px) {
-  .logoText {
-    font-size: 0.8rem;
-  }
-
-  .copyright,
-  .powered {
-    font-size: 0.7rem;
-  }
 }

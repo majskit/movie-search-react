@@ -1,19 +1,28 @@
 .container {
-  padding: 20px;
-  background-color: #111;
+  padding: clamp(15px, 3vw, 20px);
+  background: linear-gradient(
+    135deg,
+    rgba(17, 17, 17, 0.9),
+    rgba(26, 26, 46, 0.8)
+  );
+  backdrop-filter: blur(10px);
   color: #00ffff;
-  border-radius: 8px;
+  border-radius: clamp(8px, 1.5vw, 12px);
+  margin: clamp(10px, 2vw, 15px);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  min-height: 80vh;
 }
 
 .backLink {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: clamp(15px, 3vw, 20px);
   color: #00ffff;
   text-decoration: none;
   border: 1px solid #00ffff;
-  padding: 5px 10px;
-  border-radius: 4px;
+  padding: clamp(4px, 1vw, 6px) clamp(8px, 2vw, 12px);
+  border-radius: clamp(4px, 1vw, 6px);
   transition: background-color 0.3s, color 0.3s;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .backLink:hover {
@@ -23,39 +32,45 @@
 
 .image {
   float: left;
-  margin-right: 20px;
-  width: 200px;
-  border-radius: 8px;
+  margin-right: clamp(15px, 3vw, 20px);
+  margin-bottom: clamp(10px, 2vw, 15px);
+  width: clamp(150px, 30vw, 200px);
+  height: auto;
+  border-radius: clamp(6px, 1.5vw, 8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .title {
   font-family: "Orbitron", "Exo 2", sans-serif;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
   margin-top: 0;
   color: #00ffff;
-  letter-spacing: 1px;
+  letter-spacing: clamp(0.5px, 1px, 1px);
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  word-wrap: break-word;
 }
 
 .score {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: #ffcc00;
+  font-weight: 500;
 }
 
 .tagline {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: clamp(15px, 3vw, 20px);
+  clear: both;
 }
 
 .sectionTitle {
   font-family: "Orbitron", "Exo 2", sans-serif;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: 600;
   color: #00ff00;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: clamp(15px, 3vw, 20px);
+  margin-bottom: clamp(8px, 2vw, 10px);
   letter-spacing: 0.5px;
 }
 
@@ -63,45 +78,55 @@
 .genres {
   color: #ffffff;
   max-width: 800px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.6;
 }
+
 .details {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: clamp(15px, 3vw, 20px);
 }
 
 .genres {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 10px;
+  gap: clamp(8px, 2vw, 10px);
   flex-wrap: wrap;
 }
 
 .genreItem {
   color: #00ffff;
+  background: rgba(0, 255, 255, 0.1);
+  padding: clamp(4px, 1vw, 6px) clamp(8px, 2vw, 12px);
+  border-radius: clamp(4px, 1vw, 6px);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
 .links {
-  margin-top: 20px;
+  margin-top: clamp(15px, 3vw, 20px);
+  display: flex;
+  gap: clamp(10px, 2vw, 15px);
+  flex-wrap: wrap;
 }
 
 .navLink {
   display: inline-block;
-  margin-right: 15px;
   color: #00ffff;
-
-  background-color: #444;
-  padding: 5px 10px;
-  border-radius: 4px;
-
+  background: rgba(68, 68, 68, 0.8);
+  padding: clamp(6px, 1.5vw, 8px) clamp(12px, 2.5vw, 16px);
+  border-radius: clamp(4px, 1vw, 6px);
   text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s, color 0.3s;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .navLink:hover,
 .navLink.active {
   color: #00ff00;
-  border-bottom: 2px solid #00ff00;
+  border-color: #00ff00;
+  background: rgba(0, 255, 0, 0.1);
 }
