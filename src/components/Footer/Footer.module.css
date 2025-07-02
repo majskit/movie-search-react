@@ -7,8 +7,10 @@
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(0, 255, 255, 0.2);
   margin-top: auto;
-  padding: 30px 0;
+  padding: 25px 0;
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer::before {
@@ -34,13 +36,15 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
+  box-sizing: border-box;
 }
 
 .logoSection {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .logoLink {
@@ -59,7 +63,7 @@
 }
 
 .logo {
-  height: 35px;
+  height: 30px;
   width: auto;
   transition: all 0.3s ease;
   filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.4));
@@ -73,24 +77,25 @@
 .logoText {
   color: #00ffff;
   font-family: "Orbitron", "Exo 2", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
 .infoSection {
   text-align: right;
+  flex-shrink: 0;
 }
 
 .copyright {
   color: #999;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin: 0 0 5px 0;
 }
 
 .powered {
   color: #999;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin: 0;
 }
 
@@ -100,12 +105,71 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: 20px 0;
+  }
+
   .container {
     flex-direction: column;
     text-align: center;
+    padding: 0 15px;
+    gap: 12px;
+  }
+
+  .logoSection {
+    gap: 8px;
+  }
+
+  .logo {
+    height: 25px;
+  }
+
+  .logoText {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
   }
 
   .infoSection {
     text-align: center;
+  }
+
+  .copyright,
+  .powered {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px 0;
+  }
+
+  .container {
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  .logo {
+    height: 22px;
+  }
+
+  .logoText {
+    font-size: 0.9rem;
+  }
+
+  .copyright,
+  .powered {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .logoText {
+    font-size: 0.8rem;
+  }
+
+  .copyright,
+  .powered {
+    font-size: 0.7rem;
   }
 }
