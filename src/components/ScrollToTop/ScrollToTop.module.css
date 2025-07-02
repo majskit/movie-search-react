@@ -1,0 +1,68 @@
+.scrollToTop {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  background-color: #00ffff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in;
+  font-family: "Orbitron", "Exo 2", sans-serif;
+  font-weight: 700;
+}
+
+.scrollToTop:hover {
+  background-color: #00ced1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 255, 255, 0.6);
+}
+
+.scrollToTop:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 255, 255, 0.4);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.scrollToTop:hover .icon {
+  transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+  .scrollToTop {
+    bottom: 90px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,29 @@
+.container {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+}
+
+.castList {
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+  gap: 10px;
+}
+
+.castItem {
+  text-align: center;
+  color: #00ffff;
+  max-width: 150px;
+}
+
+.castImage {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.castName {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}

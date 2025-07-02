@@ -1,0 +1,103 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.9),
+    rgba(26, 26, 46, 0.8)
+  );
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  padding: 20px;
+  position: relative;
+  z-index: 100;
+}
+
+.nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav:hover::before {
+  opacity: 1;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.logoLink:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+}
+
+.logoLink:hover .logo {
+  opacity: 0.8;
+  filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.8));
+}
+
+.pageTitle {
+  color: #00ffff;
+  font-family: "Orbitron", "Exo 2", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 20px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  position: relative;
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(0, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.pageTitle:hover {
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+  border-color: rgba(0, 255, 255, 0.6);
+  background: rgba(0, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.link {
+  margin: 0 20px;
+  color: #00ffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #484848;
+}
+
+.active {
+  border-bottom: 2px solid #00ffff;
+}

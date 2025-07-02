@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.message {
+  color: #00ffff;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.subMessage {
+  color: #999;
+  font-size: 1rem;
+  margin-top: 10px;
+}
